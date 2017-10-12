@@ -11,6 +11,7 @@ brew update
 brew install gecode-5
 brew install gecode-5-doc
 brew install scip-3
+brew install scip-4
 ```
 
 #### Development Tools

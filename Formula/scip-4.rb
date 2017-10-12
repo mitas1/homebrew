@@ -8,12 +8,10 @@ class Scip4 < Formula
   depends_on "homebrew/science/ipopt"
   depends_on "homebrew/homebrew-dupes/zlib"
 
-  depends_on "gmp"
-  depends_on "readline"
-
   def install
     system "make", "ZIMPL=true", "SHARED=false"
-    system "make", "install", "ZIMPL=true", "SHARED=false", "INSTALLDIR=#{prefix}"
+    system "make", "install", "ZIMPL=false", "SHARED=true", "GMP=false", "READLINE=false",
+        "INSTALLDIR=#{prefix}"
 
     bin.install
     lib.install
